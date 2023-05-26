@@ -19,7 +19,7 @@ class Command(BaseCommand):
         count = options["count"]
         for i in range(count):
             title = fake.sentence(nb_words=7, variable_nb_words=False)
-            content=fake.text(max_nb_chars=500)
+            content = fake.text(max_nb_chars=500)
             Blog.objects.create(title=title, content=content)
         self.stdout.write(
             self.style.SUCCESS(f"Successfully generated {count} teachers.")
