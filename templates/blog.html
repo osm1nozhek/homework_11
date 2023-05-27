@@ -1,3 +1,21 @@
-<h1>{{ blog.title }}</h1>
-<p>{{ blog.content }}</p>
-<p>{{ blog.updated_at }}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+</head>
+<body>
+{##}
+{#    <div>#}
+{#        {% if messages %}#}
+{#            {% for message in messages %}#}
+{#                {{message}}#}
+{#            {% endfor %}#}
+{#        {% endif %}#}
+{#    </div>#}
+
+    <div>
+        <h1>{{ blog.title }}</h1>
+        <p>{{ blog.content }}</p>
+        <p>{{ blog.updated_at }}</p>
+    </div>

@@ -7,12 +7,11 @@ from polls.models import Blog
 
 # Create your views here.
 @cache_page(60 * 15)
-def publication_read(request, blog_id):
+def blog(request, blog_id):
     try:
         blog = Blog.objects.get(pk=blog_id)
     except Blog.DoesNotExist:
-        message = (
-            f"<h1>Publication with ID: {blog_id} doesn't exist. Try another ID!</h1>"
-        )
+        message = " Try another ID!"
         return HttpResponse(message)
+
     return render(request, "blog.html", {"blog": blog})
